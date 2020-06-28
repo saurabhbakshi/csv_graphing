@@ -1,0 +1,66 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+.main .title {
+  padding: 10px;
+  text-align: center;
+  background-color: #333;
+}
+.main .title h1 {
+  color: #fff;
+}
+
+.filters {
+  display: grid;
+  grid-auto-flow: column;
+  margin-top: 10px;
+}
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.flex-container * {
+  font-size: medium;
+  font: message-box;
+}
+.filter-item {
+  margin: 0 10px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.custom-date * {
+  /* background-color: #e36209; */
+  font-size: small;
+  padding: 0 5px;
+}
+.grid-left-pane {
+}
+.nac-perf-cpu,
+.nac-perf-memory {
+  background-color: black;
+}
+.nolio-req {
+  background-color: orange;
+}
+.error {
+  background-color: greenyellow;
+}
+.nes-perf {
+  background-color: aliceblue;
+}
+.nag-perf {
+  background-color: violet;
+}
+.amq {
+  background-color: teal;
+}

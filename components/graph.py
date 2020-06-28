@@ -15,7 +15,19 @@ def getGraph():
                 className='secondary-heading'),
         dcc.Loading(
             id="graph-loading",
-            children=[dcc.Graph(id="show-graph"), ], type='default')])
+            children=[html.Div(id='graph-container', style={'height': '90vh', 'margin': 'auto'}, children=[dcc.Graph(id="show-graph", className="show-graph"), ])], type='default')])
+
+
+@app.callback(
+    Output('graph-container', 'style'),
+    [Input('show-data-table', 'value')]
+
+)
+def updateGrpahHeight(show_table):
+    if len(show_table) == 0:
+        return {'height': '90vh', 'margin': 'auto'}
+    else:
+        return {'height': '60vh', 'margin': 'auto'}
 
 
 @app.callback(
@@ -39,6 +51,8 @@ def plotGraph(x_value, y_value, data):
                                      mode='lines+markers', name=y_val))
     else:
         fig = px.bar(plot_data, x=x_value, y=y_value)
+    fig.update_layout(autosize=True)
+    #                   margin=dict(l=50, r=50, b=100, t=100, pad=4))
     return fig
 # @app.callback(
 #     dash.dependencies.Output('nac_perf-cpu', 'figure'),

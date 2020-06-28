@@ -13,7 +13,7 @@ def left_pane_layout():
     return html.Div(className="container", children=[
         html.Div(className="title", children=[
                  html.H1('Release Automation Dashboard')]),
-        html.Div(className="left-pane-container", children=[
+        html.Div(className="content-container", children=[
             html.Div(id="left-panel", className="left-panel", children=[
                 file_uploader.file_uploader(),
                 data_load.data_load(),

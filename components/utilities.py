@@ -25,7 +25,7 @@ def loadDataFrame(file_path, delimiter, data_from=None, data_to=None):
     with open(file_path, 'r') as fp:
         line = fp.readline()
         if delimiter not in line:
-            return None, "Error loading file! The delimiter specified can't be found in file."
+            return None, data_to+100, "Error loading file! The delimiter specified can't be found in file."
     data = pd.read_csv(file_path, delimiter=delimiter, error_bad_lines=False)
     max_range = len(data)
     data = sanitize_data(data)

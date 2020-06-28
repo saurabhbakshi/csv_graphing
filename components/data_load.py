@@ -27,7 +27,7 @@ def data_load():
                   placeholder="--optional: Target columns after split, eg. DATE,TIME"),
         html.P(id='form-error', className='form-error'),
         html.Div(className="range-slider", children=[
-            html.Label('Load Data Range'),
+            html.Label('Select Data Range'),
             dcc.RangeSlider(
                 className="range-slider-slide",
                 id='range-slider',
@@ -108,7 +108,7 @@ def loadData(n_clicks, output_dir, column_splitter, delimiter, split_source, spl
     if n_clicks is not None:
         split_enabled = None
         if delimiter == None or len(delimiter) == 0:
-            validation_out = "Delimiter can be empty!"
+            validation_out = "Delimiter can't be empty!"
             return validation_out, None, None, True, 200, range_marks
         if len(column_splitter) > 0:
             split_enabled = column_splitter[0]

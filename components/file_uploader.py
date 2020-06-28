@@ -12,10 +12,11 @@ from app import app
 
 UPLOAD_DIRECTORY = "..\\upload_files"
 dirname = os.path.dirname(__file__)
-UPLOAD_DIRECTORY_ABSOLUTE = os.path.join(dirname, UPLOAD_DIRECTORY)
+UPLOAD_DIRECTORY_ABSOLUTE = os.path.abspath(
+    os.path.join(dirname, UPLOAD_DIRECTORY))
 
-# print(dirname)
-# print(UPLOAD_DIRECTORY_ABSOLUTE)
+print(dirname)
+print(UPLOAD_DIRECTORY_ABSOLUTE)
 
 
 def file_uploader():
@@ -62,12 +63,12 @@ def file_download_link(filename):
         html.A(filename, id=filename, href="")
     ], style={
         'padding': '5px',
-        'margin-left': '5px',
+        'marginLeft': '5px',
         'display': 'flex',
-        'justify-content': 'space-between',
-        'align-items': 'center',
+        'justifyContent': 'space-between',
+        'alignItems': 'center',
         'width': '100%',
-        'border-bottom': '1px dotted rgba(247 ,245, 244,.4)'
+        'borderBottom': '1px dotted rgba(247 ,245, 244,.4)'
     })
 
 

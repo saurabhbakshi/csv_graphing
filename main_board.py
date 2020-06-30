@@ -10,6 +10,7 @@ from datetime import datetime as dt
 from app import app
 
 app.layout = layout.left_pane_layout()
+app.title = "CSV Graphing"
 
 
 if __name__ == '__main__':

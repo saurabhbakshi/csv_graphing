@@ -9,6 +9,7 @@ Maintained By: Saurabh Jain
 - Plots **interactive graph** (single metrics or comparable scatters) with few clicks.
 - Filter graph data as per requirement
 - Show graph data in tabular format
+- Plot **isolated** or **comparative** graphs
 
 ![CSV Graphing Pictorial](https://github.com/saurabhbakshi/csv_graphing/blob/master/csvgraphingpictorial.png)
 

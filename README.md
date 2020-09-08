@@ -6,7 +6,7 @@ Maintained By: Saurabh Jain
 
 ## Features 
 - Load csv file with any delimiter (, or ; or # etc.) 
-- Plots **interactive graph** (single metrics or comparable scatters) with few clicks.
+- Plots **interactive graphs** (single metrics or comparable scatters) with few clicks.
 - Filter graph data as per requirement
 - Show graph data in tabular format
 - Plot **isolated** or **comparative** graphs

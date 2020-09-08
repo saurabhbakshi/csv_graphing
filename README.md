@@ -10,6 +10,7 @@ Maintained By: Saurabh Jain
 - Filter graph data as per requirement
 - Show graph data in tabular format
 
+![CSV Graphing Pictorial](https://github.com/saurabhbakshi/csv_graphing/blob/master/csvgraphingpictorial.png)
 
 ## Running Container
 - Syntax: docker run --rm -d --name -p :5500 sjain/csv-graphing:1
